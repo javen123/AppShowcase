@@ -12,9 +12,23 @@
 		8F79B2CE1BFBC04400F1B251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2CC1BFBC04400F1B251 /* Main.storyboard */; };
 		8F79B2D01BFBC04400F1B251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2CF1BFBC04400F1B251 /* Assets.xcassets */; };
 		8F79B2D31BFBC04400F1B251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2D11BFBC04400F1B251 /* LaunchScreen.storyboard */; };
+		8F79B2E21BFBC08100F1B251 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2DE1BFBC08100F1B251 /* NotoSans-Bold.ttf */; };
+		8F79B2E31BFBC08100F1B251 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2DF1BFBC08100F1B251 /* NotoSans-BoldItalic.ttf */; };
+		8F79B2E41BFBC08100F1B251 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2E01BFBC08100F1B251 /* NotoSans-Italic.ttf */; };
+		8F79B2E51BFBC08100F1B251 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2E11BFBC08100F1B251 /* NotoSans-Regular.ttf */; };
+		8F79B2E71BFBC51500F1B251 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2E61BFBC51500F1B251 /* MaterialView.swift */; };
+		8F79B2EA1BFBC56B00F1B251 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2E91BFBC56B00F1B251 /* Constants.swift */; };
+		8F79B2EC1BFBCB2E00F1B251 /* MaterialBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2EB1BFBCB2E00F1B251 /* MaterialBtn.swift */; };
+		8F79B2EE1BFBD33100F1B251 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2ED1BFBD33100F1B251 /* MaterialTextField.swift */; };
+		8F79B2F31BFBE3BE00F1B251 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79B2F01BFBE3BE00F1B251 /* Bolts.framework */; };
+		8F79B2F41BFBE3BE00F1B251 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79B2F11BFBE3BE00F1B251 /* FBSDKCoreKit.framework */; };
+		8F79B2F51BFBE3BE00F1B251 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79B2F21BFBE3BE00F1B251 /* FBSDKLoginKit.framework */; };
+		F95F7ED7B62340B1C359EEDC /* Pods_AppsNevaShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A1C90BEAF162E44D73ECD /* Pods_AppsNevaShowcase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2F8647EB35CBCF430EDD46 /* Pods-AppsNevaShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsNevaShowcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsNevaShowcase/Pods-AppsNevaShowcase.release.xcconfig"; sourceTree = "<group>"; };
+		556A1C90BEAF162E44D73ECD /* Pods_AppsNevaShowcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppsNevaShowcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F79B2C51BFBC04400F1B251 /* AppsNevaShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppsNevaShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F79B2C81BFBC04400F1B251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F79B2CA1BFBC04400F1B251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +36,18 @@
 		8F79B2CF1BFBC04400F1B251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F79B2D21BFBC04400F1B251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F79B2D41BFBC04400F1B251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F79B2DE1BFBC08100F1B251 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Bold.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		8F79B2DF1BFBC08100F1B251 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-BoldItalic.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8F79B2E01BFBC08100F1B251 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Italic.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		8F79B2E11BFBC08100F1B251 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Regular.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		8F79B2E61BFBC51500F1B251 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		8F79B2E91BFBC56B00F1B251 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F79B2EB1BFBCB2E00F1B251 /* MaterialBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialBtn.swift; sourceTree = "<group>"; };
+		8F79B2ED1BFBD33100F1B251 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		8F79B2F01BFBE3BE00F1B251 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		8F79B2F11BFBE3BE00F1B251 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8F79B2F21BFBE3BE00F1B251 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DF99A0180B74B04F26F41EDF /* Pods-AppsNevaShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsNevaShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsNevaShowcase/Pods-AppsNevaShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +55,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F79B2F31BFBE3BE00F1B251 /* Bolts.framework in Frameworks */,
+				8F79B2F41BFBE3BE00F1B251 /* FBSDKCoreKit.framework in Frameworks */,
+				8F79B2F51BFBE3BE00F1B251 /* FBSDKLoginKit.framework in Frameworks */,
+				F95F7ED7B62340B1C359EEDC /* Pods_AppsNevaShowcase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A6712BD4DC5D327DC02D41D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				556A1C90BEAF162E44D73ECD /* Pods_AppsNevaShowcase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58C942E1878CB7422D51F4F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF99A0180B74B04F26F41EDF /* Pods-AppsNevaShowcase.debug.xcconfig */,
+				3C2F8647EB35CBCF430EDD46 /* Pods-AppsNevaShowcase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8F79B2BC1BFBC04400F1B251 = {
 			isa = PBXGroup;
 			children = (
 				8F79B2C71BFBC04400F1B251 /* AppsNevaShowcase */,
 				8F79B2C61BFBC04400F1B251 /* Products */,
+				58C942E1878CB7422D51F4F1 /* Pods */,
+				0A6712BD4DC5D327DC02D41D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +103,73 @@
 		8F79B2C71BFBC04400F1B251 /* AppsNevaShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				8F79B2EF1BFBE39600F1B251 /* FrameWorks */,
+				8F79B2E81BFBC55B00F1B251 /* Util */,
+				8F79B2DC1BFBC06500F1B251 /* Model */,
+				8F79B2DB1BFBC06000F1B251 /* View */,
+				8F79B2DA1BFBC05100F1B251 /* Controller */,
 				8F79B2C81BFBC04400F1B251 /* AppDelegate.swift */,
 				8F79B2CA1BFBC04400F1B251 /* ViewController.swift */,
 				8F79B2CC1BFBC04400F1B251 /* Main.storyboard */,
 				8F79B2CF1BFBC04400F1B251 /* Assets.xcassets */,
 				8F79B2D11BFBC04400F1B251 /* LaunchScreen.storyboard */,
+				8F79B2DD1BFBC06D00F1B251 /* Resources */,
 				8F79B2D41BFBC04400F1B251 /* Info.plist */,
 			);
 			path = AppsNevaShowcase;
+			sourceTree = "<group>";
+		};
+		8F79B2DA1BFBC05100F1B251 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8F79B2DB1BFBC06000F1B251 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F79B2E61BFBC51500F1B251 /* MaterialView.swift */,
+				8F79B2EB1BFBCB2E00F1B251 /* MaterialBtn.swift */,
+				8F79B2ED1BFBD33100F1B251 /* MaterialTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8F79B2DC1BFBC06500F1B251 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8F79B2DD1BFBC06D00F1B251 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F79B2DE1BFBC08100F1B251 /* NotoSans-Bold.ttf */,
+				8F79B2DF1BFBC08100F1B251 /* NotoSans-BoldItalic.ttf */,
+				8F79B2E01BFBC08100F1B251 /* NotoSans-Italic.ttf */,
+				8F79B2E11BFBC08100F1B251 /* NotoSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8F79B2E81BFBC55B00F1B251 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8F79B2E91BFBC56B00F1B251 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		8F79B2EF1BFBE39600F1B251 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				8F79B2F01BFBE3BE00F1B251 /* Bolts.framework */,
+				8F79B2F11BFBE3BE00F1B251 /* FBSDKCoreKit.framework */,
+				8F79B2F21BFBE3BE00F1B251 /* FBSDKLoginKit.framework */,
+			);
+			name = FrameWorks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F79B2D71BFBC04400F1B251 /* Build configuration list for PBXNativeTarget "AppsNevaShowcase" */;
 			buildPhases = (
+				F37AB331F605A4AC9FC035B1 /* Check Pods Manifest.lock */,
 				8F79B2C11BFBC04400F1B251 /* Sources */,
 				8F79B2C21BFBC04400F1B251 /* Frameworks */,
 				8F79B2C31BFBC04400F1B251 /* Resources */,
+				F40550C63182E37FC7E6EDFD /* Embed Pods Frameworks */,
+				CF6E7229C6BF888B474F68B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,21 +233,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F79B2E21BFBC08100F1B251 /* NotoSans-Bold.ttf in Resources */,
 				8F79B2D31BFBC04400F1B251 /* LaunchScreen.storyboard in Resources */,
+				8F79B2E31BFBC08100F1B251 /* NotoSans-BoldItalic.ttf in Resources */,
+				8F79B2E41BFBC08100F1B251 /* NotoSans-Italic.ttf in Resources */,
 				8F79B2D01BFBC04400F1B251 /* Assets.xcassets in Resources */,
 				8F79B2CE1BFBC04400F1B251 /* Main.storyboard in Resources */,
+				8F79B2E51BFBC08100F1B251 /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF6E7229C6BF888B474F68B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppsNevaShowcase/Pods-AppsNevaShowcase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F37AB331F605A4AC9FC035B1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F40550C63182E37FC7E6EDFD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppsNevaShowcase/Pods-AppsNevaShowcase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F79B2C11BFBC04400F1B251 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F79B2EE1BFBD33100F1B251 /* MaterialTextField.swift in Sources */,
+				8F79B2E71BFBC51500F1B251 /* MaterialView.swift in Sources */,
 				8F79B2CB1BFBC04400F1B251 /* ViewController.swift in Sources */,
 				8F79B2C91BFBC04400F1B251 /* AppDelegate.swift in Sources */,
+				8F79B2EA1BFBC56B00F1B251 /* Constants.swift in Sources */,
+				8F79B2EC1BFBCB2E00F1B251 /* MaterialBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +414,16 @@
 		};
 		8F79B2D81BFBC04400F1B251 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF99A0180B74B04F26F41EDF /* Pods-AppsNevaShowcase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppsNevaShowcase",
+				);
 				INFOPLIST_FILE = AppsNevaShowcase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neva.AppsNevaShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,9 +432,16 @@
 		};
 		8F79B2D91BFBC04400F1B251 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C2F8647EB35CBCF430EDD46 /* Pods-AppsNevaShowcase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppsNevaShowcase",
+				);
 				INFOPLIST_FILE = AppsNevaShowcase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neva.AppsNevaShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,6 +467,7 @@
 				8F79B2D91BFBC04400F1B251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
