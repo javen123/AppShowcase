@@ -7,19 +7,111 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: MaterialTextField!
+    @IBOutlet weak var passwordTextField: MaterialTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool) {
+        
+        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
+            self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+        }
+        
     }
 
-
+    @IBAction func btnFbLogin(sender: AnyObject) {
+        
+        let facebookLogin = FBSDKLoginManager()
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self) {
+            result, error in
+            
+            if error != nil {
+                print("Facebook login failed. Error: \(error.localizedDescription)")
+            } else if result != nil {
+                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                DataService.ds.ref_base.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: {
+                    
+                    error, authData in
+                    
+                    if error != nil {
+                        print("Login failed: \(error.localizedDescription)")
+                    } else if authData != nil {
+                        
+                        let user = ["provider" : authData.provider!]
+                        DataService.ds.createFiresbaseUser(authData.uid, user: user)
+                        
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                        self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                        
+                    } else {
+                        print("Something above my pay grade went wrong")
+                    }
+                    
+                })
+            }
+        }
+    }
+    @IBAction func btnLoginAttemptPressed(sender: AnyObject) {
+        
+        if let email = emailTextField.text where email != "", let pwd = passwordTextField.text where pwd != "" {
+            
+            DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
+                
+                error, authData in
+                
+                if error != nil {
+                    print(error.code, error.localizedDescription)
+                    if error.code == STATUS_DOES_NOT_EXIST {
+                        DataService.ds.ref_base.createUser(email, password: pwd, withValueCompletionBlock: {
+                            error, result in
+                            
+                            if error != nil {
+                                self.showErrorAlert("Could not create account", message: "Problem creating account")
+                            } else {
+                                NSUserDefaults.standardUserDefaults().setValue(result["KEY_UID"], forKey: KEY_UID)
+                                print(result["KEY_UID"])
+                                DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
+                                    
+                                    error, authData in
+                                    let user = ["provider" : authData.provider!]
+                                    DataService.ds.createFiresbaseUser(authData.uid, user: user)
+                                
+                                })
+                                self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                                print("NEW account created")
+                            }
+                        })
+                    } else {
+                        self.showErrorAlert("Oops", message: error.localizedDescription)
+                    }
+                } else {
+                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                    self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                }
+            })
+            
+        } else {
+            showErrorAlert("Email and Password Required", message: "Please complete fields")
+        }
+        
+    }
+    
+    func showErrorAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+        
 }
 
