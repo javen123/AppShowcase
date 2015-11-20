@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		3C2F8647EB35CBCF430EDD46 /* Pods-AppsNevaShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsNevaShowcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsNevaShowcase/Pods-AppsNevaShowcase.release.xcconfig"; sourceTree = "<group>"; };
 		556A1C90BEAF162E44D73ECD /* Pods_AppsNevaShowcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppsNevaShowcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0F53521BFE328400192843 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8F6FFD121BFCBD0E003DC526 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		8F6FFD141BFCD7E1003DC526 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		8F6FFD161BFCD88E003DC526 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 			children = (
 				8F79B2E91BFBC56B00F1B251 /* Constants.swift */,
 				8F6FFD121BFCBD0E003DC526 /* DataService.swift */,
+				8F0F53521BFE328400192843 /* Header.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";

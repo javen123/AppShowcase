@@ -16,6 +16,7 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -197,23 +198,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvz-YF-Ms3" customClass="MaterialView" customModule="AppsNevaShowcase" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="56"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-Eg-Xjr">
+                                        <rect key="frame" x="8" y="9" width="544" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Talk about your app" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brl-ip-1wL" customClass="MaterialTextField" customModule="AppsNevaShowcase" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="40"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraRoundedGrey" translatesAutoresizingMaskIntoConstraints="NO" id="IFu-6T-ora">
+                                                <rect key="frame" x="452" y="0.0" width="32" height="40"/>
+                                                <animations/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="SJw-Id-Y4b"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Agc-BB-2S5" appends="YES" id="I4F-M9-6il"/>
+                                                </connections>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRq-gl-hEp" customClass="MaterialBtn" customModule="AppsNevaShowcase" customModuleProvider="target">
+                                                <rect key="frame" x="494" y="0.0" width="50" height="40"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.13725490196078433" green="0.68627450980392157" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="WlY-08-g2a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="POST">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnPostPressed:" destination="sTK-8C-EMY" eventType="touchUpInside" id="Aua-Wj-OFZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3ai-6x-3eT"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="t1m-Eg-Xjr" secondAttribute="bottom" id="H2v-74-bZL"/>
+                                    <constraint firstItem="t1m-Eg-Xjr" firstAttribute="leading" secondItem="Fvz-YF-Ms3" secondAttribute="leadingMargin" id="MFf-4W-TV6"/>
+                                    <constraint firstItem="t1m-Eg-Xjr" firstAttribute="top" secondItem="Fvz-YF-Ms3" secondAttribute="topMargin" id="O4R-Rl-SHa"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="t1m-Eg-Xjr" secondAttribute="trailing" id="v0P-84-AkL"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="353" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-UT-VjH">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="136" width="560" height="464"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="353" id="Cou-wY-6YH" customClass="PostCell" customModule="AppsNevaShowcase" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="353"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="358" id="Cou-wY-6YH" customClass="PostCell" customModule="AppsNevaShowcase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="358"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cou-wY-6YH" id="PWB-cW-okk">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="353"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="358"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofj-Nz-qWL" userLabel="Container View" customClass="MaterialView" customModule="AppsNevaShowcase" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="544" height="336"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LtS-NC-N7m">
-                                                            <rect key="frame" x="8" y="8" width="528" height="321"/>
+                                                            <rect key="frame" x="8" y="8" width="528" height="326"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wq7-Q2-Kdh">
                                                                     <rect key="frame" x="0.0" y="0.0" width="528" height="50"/>
@@ -272,7 +326,7 @@
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot Nov 18, 2015, 9.50.05 AM" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-eZ-p1E">
-                                                                    <rect key="frame" x="0.0" y="130" width="528" height="191"/>
+                                                                    <rect key="frame" x="0.0" y="130" width="528" height="196"/>
                                                                     <animations/>
                                                                 </imageView>
                                                             </subviews>
@@ -301,29 +355,44 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="descriptionTextView" destination="oSu-hF-qaC" id="VHT-RC-eb7"/>
+                                            <outlet property="heartLikeImg" destination="ZHL-5N-TxA" id="O7G-lZ-xEj"/>
                                             <outlet property="likesLbl" destination="3ZV-Ly-XGS" id="dwi-rF-gDd"/>
                                             <outlet property="profileImg" destination="VQ8-23-HuO" id="sBn-C6-0PA"/>
                                             <outlet property="showcaseImg" destination="mCh-eZ-p1E" id="s3c-GA-gob"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sTK-8C-EMY" id="smb-DH-8Sd"/>
+                                    <outlet property="delegate" destination="sTK-8C-EMY" id="G3z-Js-V6t"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Fvz-YF-Ms3" firstAttribute="top" secondItem="LaK-WL-tUa" secondAttribute="bottom" constant="8" id="12g-51-etE"/>
+                            <constraint firstItem="Fvz-YF-Ms3" firstAttribute="leading" secondItem="ng5-CM-6wc" secondAttribute="leadingMargin" id="58t-B8-ljU"/>
                             <constraint firstItem="h92-KD-0Uf" firstAttribute="top" secondItem="3RL-UT-VjH" secondAttribute="bottom" id="7bZ-ab-kPQ"/>
                             <constraint firstItem="3RL-UT-VjH" firstAttribute="leading" secondItem="ng5-CM-6wc" secondAttribute="leadingMargin" id="8ED-hh-Vou"/>
                             <constraint firstItem="3RL-UT-VjH" firstAttribute="trailing" secondItem="ng5-CM-6wc" secondAttribute="trailingMargin" id="NIv-bN-DlL"/>
-                            <constraint firstItem="3RL-UT-VjH" firstAttribute="top" secondItem="LaK-WL-tUa" secondAttribute="bottom" id="WyW-P5-4EH"/>
+                            <constraint firstItem="3RL-UT-VjH" firstAttribute="top" secondItem="LaK-WL-tUa" secondAttribute="bottom" constant="72" id="WyW-P5-4EH"/>
+                            <constraint firstItem="Fvz-YF-Ms3" firstAttribute="trailing" secondItem="ng5-CM-6wc" secondAttribute="trailingMargin" id="lbb-5a-3aj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qsR-r8-3ab"/>
                     <connections>
+                        <outlet property="imgSelector" destination="IFu-6T-ora" id="4vH-Un-Ke4"/>
+                        <outlet property="postTextField" destination="brl-ip-1wL" id="3zw-Ox-pkl"/>
                         <outlet property="tableView" destination="3RL-UT-VjH" id="Cb0-MU-vWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ8-1O-PqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Agc-BB-2S5">
+                    <connections>
+                        <action selector="btnCameraPressed:" destination="sTK-8C-EMY" id="BHZ-Zo-Bi6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1247" y="1155"/>
         </scene>
@@ -350,6 +419,7 @@
     </scenes>
     <resources>
         <image name="Simulator Screen Shot Nov 18, 2015, 9.50.05 AM" width="1334" height="750"/>
+        <image name="cameraRoundedGrey" width="32" height="26"/>
         <image name="code-icon-logo" width="318" height="281"/>
         <image name="heart-empty" width="150" height="147"/>
         <image name="icon_fb" width="65" height="65"/>

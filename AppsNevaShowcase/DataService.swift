@@ -19,6 +19,7 @@ class DataService {
     private var _ref_posts = Firebase(url: "\(URL_BASE)/posts")
     private var _ref_users = Firebase(url: "\(URL_BASE)/users")
     
+    
     var ref_base:Firebase {
         return _ref_base
     }
@@ -28,6 +29,13 @@ class DataService {
     
     var ref_users:Firebase {
         return _ref_users
+    }
+    
+    var ref_cur_user:Firebase {
+        
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
+        let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("users").childByAppendingPath(uid)
+        return user!
     }
     
     func createFiresbaseUser(uid:String, user:Dictionary<String, String>){
