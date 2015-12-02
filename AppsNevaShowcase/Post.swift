@@ -39,6 +39,7 @@ class Post {
     }
     
     init(desc:String, imageURL:String?, username:String){
+        
         self._postDescription = desc
         self._imageUrl = imageURL
         self._username = username

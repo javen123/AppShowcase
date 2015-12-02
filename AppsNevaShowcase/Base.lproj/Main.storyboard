@@ -35,7 +35,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv9-KF-MPI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code-icon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="LZx-rV-DUg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic" translatesAutoresizingMaskIntoConstraints="NO" id="LZx-rV-DUg">
                                         <rect key="frame" x="538" y="45" width="43" height="31"/>
                                         <animations/>
                                         <constraints>
@@ -178,6 +178,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="L2j-V1-V5q" id="vId-oz-QxQ"/>
+                        <outlet property="imgLogo" destination="LZx-rV-DUg" id="die-6I-d89"/>
                         <outlet property="passwordTextField" destination="jPE-I6-O8r" id="FuK-au-ywO"/>
                         <segue destination="FTD-bO-ReS" kind="show" identifier="postLoginSegue" id="I3R-QX-QC6"/>
                     </connections>
@@ -280,29 +281,29 @@
                                                                                 <constraint firstAttribute="width" constant="50" id="xDG-BO-sdW"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Big Jelly Donut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xce-US-tEm">
-                                                                            <rect key="frame" x="60" y="13" width="136" height="24"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Avenious" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xce-US-tEm">
+                                                                            <rect key="frame" x="60" y="13" width="78" height="24"/>
                                                                             <animations/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                             <color key="textColor" red="0.10588235294117647" green="0.55294117647058827" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-5N-TxA">
-                                                                            <rect key="frame" x="206" y="0.0" width="140" height="50"/>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-5N-TxA">
+                                                                            <rect key="frame" x="148" y="0.0" width="161" height="50"/>
                                                                             <animations/>
                                                                         </imageView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QEu-VI-zvN">
-                                                                            <rect key="frame" x="356" y="1" width="172" height="48"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QEu-VI-zvN">
+                                                                            <rect key="frame" x="319" y="1" width="209" height="48"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1547" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZV-Ly-XGS">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="24"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1547" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZV-Ly-XGS">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="24"/>
                                                                                     <animations/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-Sy-8tg">
-                                                                                    <rect key="frame" x="0.0" y="24" width="172" height="24"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-Sy-8tg">
+                                                                                    <rect key="frame" x="0.0" y="24" width="209" height="24"/>
                                                                                     <animations/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -380,7 +381,14 @@
                             <constraint firstItem="Fvz-YF-Ms3" firstAttribute="trailing" secondItem="ng5-CM-6wc" secondAttribute="trailingMargin" id="lbb-5a-3aj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qsR-r8-3ab"/>
+                    <navigationItem key="navigationItem" id="qsR-r8-3ab">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="hWb-Sd-t4Q">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnLogoutPressed:" destination="sTK-8C-EMY" id="iEe-40-kVW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgSelector" destination="IFu-6T-ora" id="4vH-Un-Ke4"/>
                         <outlet property="postTextField" destination="brl-ip-1wL" id="3zw-Ox-pkl"/>
@@ -420,8 +428,8 @@
     <resources>
         <image name="Simulator Screen Shot Nov 18, 2015, 9.50.05 AM" width="1334" height="750"/>
         <image name="cameraRoundedGrey" width="32" height="26"/>
-        <image name="code-icon-logo" width="318" height="281"/>
         <image name="heart-empty" width="150" height="147"/>
+        <image name="ic" width="57" height="57"/>
         <image name="icon_fb" width="65" height="65"/>
         <image name="profile" width="200" height="200"/>
     </resources>

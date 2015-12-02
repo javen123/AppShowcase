@@ -31,6 +31,8 @@ class PostCell: UITableViewCell {
         tap.numberOfTapsRequired = 1
         heartLikeImg.addGestureRecognizer(tap)
         heartLikeImg.userInteractionEnabled = true
+        
+                
     }
     
     override func drawRect(rect: CGRect) {
@@ -105,4 +107,5 @@ class PostCell: UITableViewCell {
             }
         })
     }
+    
 }

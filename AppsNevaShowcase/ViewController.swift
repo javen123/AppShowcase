@@ -9,14 +9,22 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftSpinner
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: MaterialTextField!
     @IBOutlet weak var passwordTextField: MaterialTextField!
+    @IBOutlet weak var imgLogo: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imgLogo.layer.cornerRadius = imgLogo.frame.width / 2
+        imgLogo.clipsToBounds = true
+        
+         addSpinner()
         
         
     }
@@ -24,11 +32,14 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         
         if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
-            self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+            
+            SwiftSpinner.hide({ () -> Void in
+                self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                
+            })
         }
-        
     }
-
+    
     @IBAction func btnFbLogin(sender: AnyObject) {
         
         let facebookLogin = FBSDKLoginManager()
@@ -64,22 +75,27 @@ class ViewController: UIViewController {
     @IBAction func btnLoginAttemptPressed(sender: AnyObject) {
         
         if let email = emailTextField.text where email != "", let pwd = passwordTextField.text where pwd != "" {
+           
+            addSpinner()
             
             DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
                 
                 error, authData in
                 
                 if error != nil {
+                    
                     print(error.code, error.localizedDescription)
+                    
                     if error.code == STATUS_DOES_NOT_EXIST {
+                        
                         DataService.ds.ref_base.createUser(email, password: pwd, withValueCompletionBlock: {
                             error, result in
                             
                             if error != nil {
                                 self.showErrorAlert("Could not create account", message: "Problem creating account")
                             } else {
-                                NSUserDefaults.standardUserDefaults().setValue(result["KEY_UID"], forKey: KEY_UID)
-                                print(result["KEY_UID"])
+                                NSUserDefaults.standardUserDefaults().setValue(result["uid"], forKey: KEY_UID)
+                                print(result["uid"])
                                 DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
                                     
                                     error, authData in
@@ -87,8 +103,11 @@ class ViewController: UIViewController {
                                     DataService.ds.createFiresbaseUser(authData.uid, user: user)
                                 
                                 })
-                                self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
-                                print("NEW account created")
+                                SwiftSpinner.hide({ () -> Void in
+                                    self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                                    print("NEW account created")
+                                })
+                                
                             }
                         })
                     } else {
@@ -96,7 +115,10 @@ class ViewController: UIViewController {
                     }
                 } else {
                     NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-                    self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                    SwiftSpinner.hide({ () -> Void in
+                        self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
+                    })
+                    
                 }
             })
             
@@ -112,6 +134,22 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    func loadWelcomeView() {
         
+        let welcomeVC = WelcomeVC(nibName: "WelView", bundle: nil)
+        welcomeVC.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        self.presentViewController(welcomeVC, animated: true, completion: nil)
+
+    }
+    
+    func addSpinner() {
+        SwiftSpinner.setTitleFont(UIFont(name: "Noto", size: 22.0))
+        SwiftSpinner.show("Connecting to the cloud", animated: true).addTapHandler({ () -> () in
+            SwiftSpinner.hide()
+            }, subtitle: "Tap to hide while connecting")
+    }
+
+    
 }
 

@@ -27,6 +27,9 @@
 		8F79B2F31BFBE3BE00F1B251 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79B2F01BFBE3BE00F1B251 /* Bolts.framework */; };
 		8F79B2F41BFBE3BE00F1B251 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79B2F11BFBE3BE00F1B251 /* FBSDKCoreKit.framework */; };
 		8F79B2F51BFBE3BE00F1B251 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79B2F21BFBE3BE00F1B251 /* FBSDKLoginKit.framework */; };
+		8FF87C311C0C9D820074E383 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF87C301C0C9D820074E383 /* WelcomeView.swift */; };
+		8FF87C371C0CC0050074E383 /* WelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF87C361C0CC0050074E383 /* WelView.xib */; };
+		8FF87C3F1C0CD0050074E383 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF87C3E1C0CD0050074E383 /* WelcomeVC.swift */; };
 		F95F7ED7B62340B1C359EEDC /* Pods_AppsNevaShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A1C90BEAF162E44D73ECD /* Pods_AppsNevaShowcase.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		8F79B2F01BFBE3BE00F1B251 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8F79B2F11BFBE3BE00F1B251 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8F79B2F21BFBE3BE00F1B251 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		8FF87C301C0C9D820074E383 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8FF87C361C0CC0050074E383 /* WelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelView.xib; sourceTree = "<group>"; };
+		8FF87C3E1C0CD0050074E383 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		DF99A0180B74B04F26F41EDF /* Pods-AppsNevaShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsNevaShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsNevaShowcase/Pods-AppsNevaShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +138,7 @@
 				8F6FFD141BFCD7E1003DC526 /* FeedVC.swift */,
 				8F79B2C81BFBC04400F1B251 /* AppDelegate.swift */,
 				8F79B2CA1BFBC04400F1B251 /* ViewController.swift */,
+				8FF87C3E1C0CD0050074E383 /* WelcomeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 				8F79B2EB1BFBCB2E00F1B251 /* MaterialBtn.swift */,
 				8F79B2ED1BFBD33100F1B251 /* MaterialTextField.swift */,
 				8F6FFD161BFCD88E003DC526 /* PostCell.swift */,
+				8FF87C301C0C9D820074E383 /* WelcomeView.swift */,
+				8FF87C361C0CC0050074E383 /* WelView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 				8F79B2D01BFBC04400F1B251 /* Assets.xcassets in Resources */,
 				8F79B2CE1BFBC04400F1B251 /* Main.storyboard in Resources */,
 				8F79B2E51BFBC08100F1B251 /* NotoSans-Regular.ttf in Resources */,
+				8FF87C371C0CC0050074E383 /* WelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,9 +325,11 @@
 				8F79B2EE1BFBD33100F1B251 /* MaterialTextField.swift in Sources */,
 				8F6FFD131BFCBD0E003DC526 /* DataService.swift in Sources */,
 				8F79B2E71BFBC51500F1B251 /* MaterialView.swift in Sources */,
+				8FF87C3F1C0CD0050074E383 /* WelcomeVC.swift in Sources */,
 				8F79B2CB1BFBC04400F1B251 /* ViewController.swift in Sources */,
 				8F6FFD151BFCD7E1003DC526 /* FeedVC.swift in Sources */,
 				8F6FFD171BFCD88E003DC526 /* PostCell.swift in Sources */,
+				8FF87C311C0C9D820074E383 /* WelcomeView.swift in Sources */,
 				8F79B2C91BFBC04400F1B251 /* AppDelegate.swift in Sources */,
 				8F79B2EA1BFBC56B00F1B251 /* Constants.swift in Sources */,
 				8F79B2EC1BFBCB2E00F1B251 /* MaterialBtn.swift in Sources */,
@@ -445,6 +457,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neva.AppsNevaShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,6 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neva.AppsNevaShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

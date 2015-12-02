@@ -8,8 +8,7 @@
 
 import Foundation
 import Firebase
-
-let URL_BASE = "https://appsnevashowcase.firebaseio.com"
+import SwiftSpinner
 
 class DataService {
     
@@ -42,4 +41,26 @@ class DataService {
         ref_users.childByAppendingPath(uid).setValue(user)
     }
     
+    func removePost (key:String, completed:DownloadComplete) -> Int?{
+        
+        let post = Firebase(url: "\(URL_BASE)/posts/\(key)")
+        var success:Int?
+        post.removeValueWithCompletionBlock {
+            
+            error, result in
+    
+            if error != nil {
+                print(error.debugDescription)
+                success = error.code
+            }
+            else if result != nil {
+                print(result.authData.uid)
+                
+            }
+            
+            completed()
+        }
+        
+        return success
+    }
 }

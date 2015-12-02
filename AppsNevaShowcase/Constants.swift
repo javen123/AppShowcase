@@ -19,3 +19,14 @@ let LOGGED_IN = "postLoginSegue"
 // Status codes
 
 let STATUS_DOES_NOT_EXIST = -8
+
+//imageShackkey
+
+let IMAGE_SHACK = "1YZL0VAJ2e4d929d40f3b0fcad513e71db5c8a56"
+let IMAGE_SHACK_URL = "https://post.imageshack.us/upload_api.php"
+
+// Firebase
+
+let URL_BASE = "https://appsnevashowcase.firebaseio.com"
+
+public typealias DownloadComplete = () -> ()

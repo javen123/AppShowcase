@@ -9,12 +9,18 @@
 import UIKit
 import Firebase
 import Alamofire
+import SwiftSpinner
 
 class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    var fireBase:Firebase!
+    
+    
+    let okAction = UIAlertAction(title:"OK", style:.Cancel, handler:nil)
+    
     static var imgCache = NSCache()
     
     var imgPicker:UIImagePickerController!
@@ -46,6 +52,14 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINav
                 self.tableView.reloadData()
             }
         })
+        
+      
+    }
+    @IBAction func btnLogoutPressed(sender: UIBarButtonItem) {
+        
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
+        self.dismissViewControllerAnimated(true, completion: nil)
+
     }
 
     //MARK: Table data dn delegate
@@ -62,6 +76,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINav
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("postCell") as? PostCell {
+            
             
             cell.request?.cancel()
             
@@ -88,6 +103,33 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINav
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let postKey = posts[indexPath.row].postKey
+        
+        let alert = UIAlertController(title: "Delete?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .Default){ (UIAlertAction) -> Void in
+            
+        SwiftSpinner.show("Deleting post now", animated: true)
+            
+            if let success = DataService.ds.removePost(postKey, completed: { () -> () in
+                SwiftSpinner.hide()
+            }) {
+                if success == 1 {
+                    self.showErrorAlert("Oops", message: "you can only delete your own posts")
+                }
+            }
+        }
+        
+        alert.addAction(yesAction)
+        
+        let noAction = UIAlertAction(title: "No", style: .Cancel) { (UIAlertAction) -> Void in
+            
+        }
+        alert.addAction(noAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     
     //MARK: Post section
     
@@ -112,11 +154,14 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINav
         
         if let text = postTextField.text where text != "" {
             
+            SwiftSpinner.show("Creating post in the cloud", animated: true)
+            SwiftSpinner.setTitleFont(UIFont(name: "Noto", size: 22.0))
+            
             if let img = imgSelector.image where imageSelected == true {
-                let urlStr = "https://post.imageshack.us/upload_api.php"
+                let urlStr = IMAGE_SHACK_URL
                 let url = NSURL(string: urlStr)!
                 let imgData = UIImageJPEGRepresentation(img, 0.2)!
-                let keyData = "1YZL0VAJ2e4d929d40f3b0fcad513e71db5c8a56".dataUsingEncoding(NSUTF8StringEncoding)!
+                let keyData = IMAGE_SHACK.dataUsingEncoding(NSUTF8StringEncoding)!
                 let keyJSON = "json".dataUsingEncoding(NSUTF8StringEncoding)!
                 
                 Alamofire.upload(.POST, url, multipartFormData: { (MultipartFormData) -> Void in
@@ -155,11 +200,21 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINav
         if imgUrl != nil {
             post["imageURL"] = imgUrl
         }
+        post["userID"] = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID)
         let firebasePost = DataService.ds.ref_posts.childByAutoId()
         firebasePost.setValue(post)
         postTextField.text = ""
         imgSelector.image = UIImage(named: "cameraRoundedGrey")
-        tableView.reloadData()
-        
+        SwiftSpinner.hide { () -> Void in
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+    func showErrorAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
