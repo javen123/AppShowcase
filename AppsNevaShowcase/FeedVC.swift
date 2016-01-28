@@ -56,7 +56,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UINav
       
     }
     @IBAction func btnLogoutPressed(sender: UIBarButtonItem) {
-        
+        DataService.ds.ref_base.unauth()
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
         self.dismissViewControllerAnimated(true, completion: nil)
 

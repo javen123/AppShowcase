@@ -39,6 +39,19 @@ class DataService {
     
     func createFiresbaseUser(uid:String, user:Dictionary<String, String>){
         ref_users.childByAppendingPath(uid).setValue(user)
+        
+    }
+    
+    func authUserFirebase(user:String, passwd:String) {
+        
+            ref_base.authUser(user, password: passwd) {
+                error, result in
+                if error != nil {
+                    
+                }
+        }
+        
+        
     }
     
     func removePost (key:String, completed:DownloadComplete) -> Int?{

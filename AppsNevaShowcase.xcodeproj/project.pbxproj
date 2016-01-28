@@ -11,15 +11,15 @@
 		8F6FFD151BFCD7E1003DC526 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6FFD141BFCD7E1003DC526 /* FeedVC.swift */; };
 		8F6FFD171BFCD88E003DC526 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6FFD161BFCD88E003DC526 /* PostCell.swift */; };
 		8F6FFD191BFD115B003DC526 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6FFD181BFD115B003DC526 /* Post.swift */; };
+		8F7344F81C596AE000F71E6E /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7344F41C596AE000F71E6E /* NotoSans-Bold.ttf */; };
+		8F7344F91C596AE000F71E6E /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7344F51C596AE000F71E6E /* NotoSans-BoldItalic.ttf */; };
+		8F7344FA1C596AE000F71E6E /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7344F61C596AE000F71E6E /* NotoSans-Italic.ttf */; };
+		8F7344FB1C596AE000F71E6E /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7344F71C596AE000F71E6E /* NotoSans-Regular.ttf */; };
 		8F79B2C91BFBC04400F1B251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2C81BFBC04400F1B251 /* AppDelegate.swift */; };
 		8F79B2CB1BFBC04400F1B251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2CA1BFBC04400F1B251 /* ViewController.swift */; };
 		8F79B2CE1BFBC04400F1B251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2CC1BFBC04400F1B251 /* Main.storyboard */; };
 		8F79B2D01BFBC04400F1B251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2CF1BFBC04400F1B251 /* Assets.xcassets */; };
 		8F79B2D31BFBC04400F1B251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2D11BFBC04400F1B251 /* LaunchScreen.storyboard */; };
-		8F79B2E21BFBC08100F1B251 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2DE1BFBC08100F1B251 /* NotoSans-Bold.ttf */; };
-		8F79B2E31BFBC08100F1B251 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2DF1BFBC08100F1B251 /* NotoSans-BoldItalic.ttf */; };
-		8F79B2E41BFBC08100F1B251 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2E01BFBC08100F1B251 /* NotoSans-Italic.ttf */; };
-		8F79B2E51BFBC08100F1B251 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F79B2E11BFBC08100F1B251 /* NotoSans-Regular.ttf */; };
 		8F79B2E71BFBC51500F1B251 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2E61BFBC51500F1B251 /* MaterialView.swift */; };
 		8F79B2EA1BFBC56B00F1B251 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2E91BFBC56B00F1B251 /* Constants.swift */; };
 		8F79B2EC1BFBCB2E00F1B251 /* MaterialBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79B2EB1BFBCB2E00F1B251 /* MaterialBtn.swift */; };
@@ -41,6 +41,10 @@
 		8F6FFD141BFCD7E1003DC526 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		8F6FFD161BFCD88E003DC526 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		8F6FFD181BFD115B003DC526 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8F7344F41C596AE000F71E6E /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		8F7344F51C596AE000F71E6E /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8F7344F61C596AE000F71E6E /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		8F7344F71C596AE000F71E6E /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		8F79B2C51BFBC04400F1B251 /* AppsNevaShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppsNevaShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F79B2C81BFBC04400F1B251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F79B2CA1BFBC04400F1B251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,10 +52,6 @@
 		8F79B2CF1BFBC04400F1B251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F79B2D21BFBC04400F1B251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F79B2D41BFBC04400F1B251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F79B2DE1BFBC08100F1B251 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Bold.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-Bold.ttf"; sourceTree = "<group>"; };
-		8F79B2DF1BFBC08100F1B251 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-BoldItalic.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		8F79B2E01BFBC08100F1B251 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Italic.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-Italic.ttf"; sourceTree = "<group>"; };
-		8F79B2E11BFBC08100F1B251 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Regular.ttf"; path = "../../../../../Downloads/NotoSans-unhinted/NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		8F79B2E61BFBC51500F1B251 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		8F79B2E91BFBC56B00F1B251 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F79B2EB1BFBCB2E00F1B251 /* MaterialBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialBtn.swift; sourceTree = "<group>"; };
@@ -167,10 +167,10 @@
 		8F79B2DD1BFBC06D00F1B251 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8F79B2DE1BFBC08100F1B251 /* NotoSans-Bold.ttf */,
-				8F79B2DF1BFBC08100F1B251 /* NotoSans-BoldItalic.ttf */,
-				8F79B2E01BFBC08100F1B251 /* NotoSans-Italic.ttf */,
-				8F79B2E11BFBC08100F1B251 /* NotoSans-Regular.ttf */,
+				8F7344F41C596AE000F71E6E /* NotoSans-Bold.ttf */,
+				8F7344F51C596AE000F71E6E /* NotoSans-BoldItalic.ttf */,
+				8F7344F61C596AE000F71E6E /* NotoSans-Italic.ttf */,
+				8F7344F71C596AE000F71E6E /* NotoSans-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -230,6 +230,7 @@
 				TargetAttributes = {
 					8F79B2C41BFBC04400F1B251 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = G9Y82XZD3R;
 					};
 				};
 			};
@@ -256,13 +257,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F79B2E21BFBC08100F1B251 /* NotoSans-Bold.ttf in Resources */,
+				8F7344F91C596AE000F71E6E /* NotoSans-BoldItalic.ttf in Resources */,
 				8F79B2D31BFBC04400F1B251 /* LaunchScreen.storyboard in Resources */,
-				8F79B2E31BFBC08100F1B251 /* NotoSans-BoldItalic.ttf in Resources */,
-				8F79B2E41BFBC08100F1B251 /* NotoSans-Italic.ttf in Resources */,
 				8F79B2D01BFBC04400F1B251 /* Assets.xcassets in Resources */,
 				8F79B2CE1BFBC04400F1B251 /* Main.storyboard in Resources */,
-				8F79B2E51BFBC08100F1B251 /* NotoSans-Regular.ttf in Resources */,
+				8F7344FB1C596AE000F71E6E /* NotoSans-Regular.ttf in Resources */,
+				8F7344FA1C596AE000F71E6E /* NotoSans-Italic.ttf in Resources */,
+				8F7344F81C596AE000F71E6E /* NotoSans-Bold.ttf in Resources */,
 				8FF87C371C0CC0050074E383 /* WelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +448,8 @@
 			baseConfigurationReference = DF99A0180B74B04F26F41EDF /* Pods-AppsNevaShowcase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Aven (6JSPBVW7S2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Aven (6JSPBVW7S2)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neva.AppsNevaShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -466,6 +470,8 @@
 			baseConfigurationReference = 3C2F8647EB35CBCF430EDD46 /* Pods-AppsNevaShowcase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NEVA HOLDINGS, LLC (G9Y82XZD3R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NEVA HOLDINGS, LLC (G9Y82XZD3R)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,6 +482,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neva.AppsNevaShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

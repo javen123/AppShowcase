@@ -74,58 +74,70 @@ class ViewController: UIViewController {
     }
     @IBAction func btnLoginAttemptPressed(sender: AnyObject) {
         
+        addSpinner()
+        
         if let email = emailTextField.text where email != "", let pwd = passwordTextField.text where pwd != "" {
            
-            addSpinner()
-            
             DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
                 
                 error, authData in
                 
                 if error != nil {
-                    
-                    print(error.code, error.localizedDescription)
+                    print("Login error: \(error.localizedDescription)")
                     
                     if error.code == STATUS_DOES_NOT_EXIST {
                         
                         DataService.ds.ref_base.createUser(email, password: pwd, withValueCompletionBlock: {
-                            error, result in
+                            
+                            error, aResult in
                             
                             if error != nil {
-                                self.showErrorAlert("Could not create account", message: "Problem creating account")
-                            } else {
-                                NSUserDefaults.standardUserDefaults().setValue(result["uid"], forKey: KEY_UID)
-                                print(result["uid"])
-                                DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
-                                    
-                                    error, authData in
-                                    let user = ["provider" : authData.provider!]
-                                    DataService.ds.createFiresbaseUser(authData.uid, user: user)
-                                
-                                })
                                 SwiftSpinner.hide({ () -> Void in
-                                    self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
-                                    print("NEW account created")
+                                    self.showErrorAlert("Oops", message: error.localizedDescription)
                                 })
                                 
+                            } else {
+                                let uid = aResult["uid"] as? String
+                                DataService.ds.ref_base.authUser(email, password: pwd, withCompletionBlock: {
+                                    error, result in
+                                    if error != nil {
+                                        SwiftSpinner.hide({ () -> Void in
+                                            self.showErrorAlert("Oops", message: error.localizedDescription)
+                                        })
+                                    } else {
+                                        NSUserDefaults.standardUserDefaults().setValue(result.uid, forKey: KEY_UID)
+                                        let user = ["provider": result.provider!]
+                                        DataService.ds.createFiresbaseUser(uid!, user: user)
+                                        SwiftSpinner.hide({ () -> Void in
+                                            self.clearTextFields()
+                                            self.performSegueWithIdentifier("postLoginSegue", sender: nil)
+                                        })
+                                    }
+                                })
                             }
                         })
+
+                        
                     } else {
-                        self.showErrorAlert("Oops", message: error.localizedDescription)
+                        SwiftSpinner.hide({ () -> Void in
+                            self.showErrorAlert("Oops", message: error.localizedDescription)
+                        })
+                        
                     }
-                } else {
-                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-                    SwiftSpinner.hide({ () -> Void in
-                        self.performSegueWithIdentifier(LOGGED_IN, sender: nil)
-                    })
                     
+                } else {
+                    SwiftSpinner.hide({ () -> Void in
+                       NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                        print("UID: \(authData.uid)")
+                        self.clearTextFields()
+                        self.performSegueWithIdentifier("postLoginSegue", sender: nil)
+                    })
                 }
             })
-            
         } else {
-            showErrorAlert("Email and Password Required", message: "Please complete fields")
+            SwiftSpinner.hide()
+            self.showErrorAlert("Oops", message: "Please fill out both fields")
         }
-        
     }
     
     func showErrorAlert(title:String, message:String){
@@ -148,6 +160,11 @@ class ViewController: UIViewController {
         SwiftSpinner.show("Connecting to the cloud", animated: true).addTapHandler({ () -> () in
             SwiftSpinner.hide()
             }, subtitle: "Tap to hide while connecting")
+    }
+    
+    func clearTextFields() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
 
     
